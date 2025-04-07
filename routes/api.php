@@ -20,11 +20,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::prefix('/tests')->group(function () {
+    // For all branches
     Route::get('/feature-1', function () {
         return $this->sendResponse(200, null);
     });
     // For development, main
     Route::get('/feature-2', function () {
+        return $this->sendResponse(200, null);
+    });
+    // For all branches
+    Route::get('/feature-4', function () {
         return $this->sendResponse(200, null);
     });
 });
