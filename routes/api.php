@@ -23,4 +23,8 @@ Route::prefix('/tests')->group(function () {
     Route::get('/feature-1', function () {
         return $this->sendResponse(200, null);
     });
+    // For separate-development, separate-main
+    Route::get('/feature-3', function () {
+        return $this->sendResponse(200, null);
+    });
 });
