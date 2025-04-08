@@ -10,4 +10,9 @@ class TestController extends Controller
     {
         return $this->sendResponse(200, null);
     }
+
+    public function b()
+    {
+        return $this->sendResponse(200, null);
+    }
 }
