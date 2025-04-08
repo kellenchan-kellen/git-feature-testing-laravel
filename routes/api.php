@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,10 @@ Route::prefix('/tests')->group(function () {
     });
     // For all branches
     Route::get('/feature-4', function () {
+        return $this->sendResponse(200, null);
+    });
+
+    Route::get('/feature-a', function () {
         return $this->sendResponse(200, null);
     });
 });
